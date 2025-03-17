@@ -29,7 +29,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
             int weight = edge.weight;
 
             // updates shortest path if shorter is found
-            if (!visited[v] && distances[u] + weight < distances[v]) {
+            if (distances[u] + weight < distances[v]) {
                 distances[v] = distances[u] + weight; // updates distance
                 previous[v] = u; 
                 minHeap.push({distances[v], v}); // adds distance to pq
@@ -62,7 +62,8 @@ void print_path(const vector<int>& v, int total) {
         if (i < v.size() - 1) {
             cout << " ";
         }
+        cout << " ";
     }
 
-    cout << " " << "\nTotal cost is " << total << endl;
+    cout << "\nTotal cost is " << total << endl;
 }
