@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
     Graph G;
-    file_to_graph("src/small.txt", G);
+    // file_to_graph("src/small.txt", G);
     // file_to_graph("src/medium.txt", G);
     // file_to_graph("src/large.txt", G);
-    // file_to_graph("src/largest.txt", G);
+    file_to_graph("src/largest.txt", G);
 
     vector<int> prev;
     vector<int> dist = dijkstra_shortest_path(G, 0, prev);
