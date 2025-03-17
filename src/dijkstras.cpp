@@ -52,7 +52,7 @@ vector<int> extract_shortest_path(const vector<int>& /*distances*/, const vector
 
 void print_path(const vector<int>& v, int total) {
     // check if empty
-    if (v.empty()) {
+    if (total == INF) {
         cout << "Path not found: " << endl;
         return;
     }
